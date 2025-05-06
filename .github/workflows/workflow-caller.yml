@@ -3,7 +3,7 @@ name: Parent workflow
 on:
   workflow_dispatch:
     inputs:
-      name:
+      name_parent:
         description: 'Name'
         required: true
         type: string
@@ -13,4 +13,4 @@ jobs:
   call:
     uses: ./.github/workflows/workflow-callee.yml
     with:
-      name: ${{ github.event.inputs.name }}
+      name: ${{ github.event.inputs.name_parent }}

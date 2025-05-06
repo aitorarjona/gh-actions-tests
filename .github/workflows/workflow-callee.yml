@@ -2,6 +2,12 @@ name: Reusable workflow example
 
 on:
   workflow_call:
+    inputs:
+      name:
+        description: 'Name'
+        required: true
+        type: string
+        default: 'aitor'
   workflow_dispatch:
     inputs:
       name:

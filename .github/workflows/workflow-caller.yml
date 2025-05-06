@@ -1,0 +1,16 @@
+name: Parent workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Name'
+        required: true
+        type: string
+        default: 'aitor'
+
+jobs:
+  call:
+    uses: ./.github/workflows/workflow-callee.yml
+    with:
+      name: ${{ github.event.inputs.name }}

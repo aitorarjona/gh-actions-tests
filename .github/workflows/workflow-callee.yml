@@ -7,14 +7,6 @@ on:
         description: 'Name'
         required: true
         type: string
-        default: 'test callee'
-  workflow_dispatch:
-    inputs:
-      name:
-        description: 'Name'
-        required: true
-        type: string
-        default: 'test callee'
       
 jobs:
   triage:
